@@ -2,11 +2,11 @@
 
    deploy () {
     if ! command -v python3 > /dev/null; then
-    echo " Python3 Uninstalled"
+    echo "Python3 is not installed"
     exit 1
     fi
-    if ! command -v fakezip > /dev/null; then
-    echo "Zip uninstalled"
+    if ! command -v zip > /dev/null; then
+    echo "Zip is not installed"
     exit 1
     fi
    }
