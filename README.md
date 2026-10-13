@@ -103,6 +103,19 @@ attendance_tracker_v1/attendance_checker.py
 ```
 There was no `Helpers/assets.csv` because the roster had not been built yet. If the interrupt happens later (for example at the threshold question), the zip also contains `assets.csv`.
 
+## Edge cases handled
+- Empty project title: rejected with a message.
+- Project folder already exists: the script asks before overwriting, and `n` keeps the old folder.
+- Invalid roster choice or menu option: an error message, no crash.
+- Non-numeric thresholds: the defaults are kept and the file is not edited.
+- Missing log files during archive (for example no `absent.log`): the script reports it and skips it.
+- Run or archive on a project that does not exist: an error message and return.
+- Ctrl+C or Ctrl+Z before the folder exists: the script reports that there is nothing to archive.
+
+## What triggers an archive
+- **Log archive:** manual. After a marking session, choose option 3 and the script moves `attendance.log` and `absent.log` into their own `archives/` folders with a timestamp.
+- **Interrupt archive:** automatic. Ctrl+C or Ctrl+Z during deployment runs `handle_interrupt`, which zips the incomplete project into `attendance_tracker_<title>_archive.zip` and removes the half-built folder.
+
 ## How I tested
 | Test | What I checked | Result |
 |---|---|---|
