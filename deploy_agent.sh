@@ -8,7 +8,7 @@ echo
 
 echo "Deployment stopped by user!"
 
-if [ -d "$dir_title" ]; then
+if [ "$created" = "1" ] && [ -d "$dir_title" ]; then
 
 echo "Archiving the project for deployment..."
 
@@ -91,6 +91,7 @@ fi
 fi
 
 mkdir -p "$dir_title/Helpers" "$dir_title/reports"
+created=1
 
 cp templates/attendance_checker.py "$dir_title/"
 
