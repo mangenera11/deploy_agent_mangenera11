@@ -95,11 +95,11 @@ If the signal arrives before the project directory exists, it prints that there 
 ### What the `.zip` archive contains
 It contains whatever had been created at the moment of the interrupt. When I pressed Ctrl+Z at the roster prompt, `unzip -l` showed:
 ```
-attendance_tracker_ztest/
-attendance_tracker_ztest/Helpers/
-attendance_tracker_ztest/Helpers/config.json
-attendance_tracker_ztest/reports/
-attendance_tracker_ztest/attendance_checker.py
+attendance_tracker_v1/
+attendance_tracker_v1/Helpers/
+attendance_tracker_v1/Helpers/config.json
+attendance_tracker_v1/reports/
+attendance_tracker_v1/attendance_checker.py
 ```
 There was no `Helpers/assets.csv` because the roster had not been built yet. If the interrupt happens later (for example at the threshold question), the zip also contains `assets.csv`.
 
