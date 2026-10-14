@@ -2,7 +2,7 @@
 
 `deploy_agent.sh` is a shell script that **deploys**, **runs** and **archives the logs** of the Student Attendance Tracker (`attendance_checker.py`, which I did not modify). It also handles Ctrl+C and Ctrl+Z safely while a deployment is in progress.
 
-**Video walkthrough:** <PASTE YOUR VIDEO LINK HERE>
+**Video walkthrough:** https://drive.google.com/file/d/1zAO3x3eGadVQRNYDY-AbaswJwyx-LKce/view?usp=sharing
 
 ## Repository contents
 ```
